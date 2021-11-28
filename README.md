@@ -4,16 +4,16 @@ This library automatically manages the WiFi connection.
 You only need to set your SSID and password.
 
 What this library does:
-    - Automatically connect to the WiFi network.
-    - Automatically reconnect after a connection is lost.
-    - If enabled, display useful debugging messages to Serial.
-    - Take advantage of WiFi events and Timers to make this library completely non-blocking and event-driven.
-    - Compatible with both ESP32 and ESP8266.
-    - Provide callbacks for connection or disconnection events
+- Automatically connect to the WiFi network.
+- Automatically reconnect after a connection is lost.
+- If enabled, display useful debugging messages to Serial.
+- Take advantage of WiFi events and Timers to make this library completely non-blocking and event-driven.
+- Compatible with both ESP32 and ESP8266.
+- Provide callbacks for connection or disconnection events.
 
-What this library does not do and will not do:
-    - AP mode to set credentials.
-    - Other things that will make this library less light and simple.
+What this library does not:
+- AP mode to set credentials with a web GUI.
+- Other things that will make this library less light and simple.
 
 This library is meant to be light and simple. Other libraries exist if you need advanced functionalities. However, take note that a more complex library is less light and simple.
 
@@ -63,7 +63,7 @@ Set WiFi infos right now (recommended):
     const bool autoConnect = true);     // if set, the wifi will not connect automatically.
 ```
 
-If you want to set wifi later:
+If you want to set WiFi later:
 ```c++
   EspSimpleWifiHandler();
 ```
