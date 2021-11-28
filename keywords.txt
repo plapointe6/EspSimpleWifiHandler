@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For EspSimpleMQTTClient
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EspSimpleWifiHandler KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+enableDebuggingMessages         KEYWORD2
+isConnected                     KEYWORD2
+setWifiInfos                    KEYWORD2
+setHostname                     KEYWORD2
+setAutoReconnect                KEYWORD2
+onConnectionEstablished         KEYWORD2
+onConnectionLost                KEYWORD2
+beginConnection                 KEYWORD2
+disconnect                      KEYWORD2
