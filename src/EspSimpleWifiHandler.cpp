@@ -49,17 +49,25 @@ EspSimpleWifiHandler::EspSimpleWifiHandler(
     });
   #else // for ESP32
     WiFi.onEvent(
-      [this](WiFiEvent_t event, system_event_info_t info) {
+      [this](WiFiEvent_t event, WiFiEventInfo_t info) {
         this->_onWifiConnected();
       },
+#if ESP_ARDUINO_VERSION_MAJOR >= 2
+      WiFiEvent_t::ARDUINO_EVENT_WIFI_STA_GOT_IP
+#else
       WiFiEvent_t::SYSTEM_EVENT_STA_GOT_IP
+#endif
     );
 
     WiFi.onEvent(
-      [this](WiFiEvent_t event, system_event_info_t info) {
+      [this](WiFiEvent_t event, WiFiEventInfo_t info) {
         this->_onWifiDisconnected();
       },
+#if ESP_ARDUINO_VERSION_MAJOR >= 2
+      WiFiEvent_t::ARDUINO_EVENT_WIFI_STA_DISCONNECTED
+#else
       WiFiEvent_t::SYSTEM_EVENT_STA_DISCONNECTED
+#endif
     );
   #endif
 
